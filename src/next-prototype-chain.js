@@ -3,6 +3,7 @@
   var nx = global.nx || require('next-js-core2');
 
   nx.prototypeChain = function(inTarget) {
+    if (inTarget == null) return [];
     var chain = [];
     var proto = Object.getPrototypeOf(inTarget);
     do {
